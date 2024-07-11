@@ -32,7 +32,7 @@ export default function SignUpPage() {
 
   return (
     <form
-      className=" w-full mt-10 max-w-sm mx-auto px-4 shadow-lg dark:bg-gray-800 py-6  rounded-md"
+      className=" w-full mt-10 max-w-sm mx-auto px-4 shadow-lg dark:bg-gray-800 py-6  rounded-md "
       onSubmit={handleSubmit(onSubmitHandler)}
     >
       <motion.h2

@@ -25,20 +25,20 @@ export default function HomePage() {
     <div className="w-full pt-4 mt-2  rounded-md bg-transparent ">
       <form
         onSubmit={handleSubmit}
-        className=" w-full h-14 flex items-center justify-center gap-2 fixed  inset-y-20 z-50 bg-white  dark:bg-gray-900 "
+        className=" w-full md:h-14  flex items-center justify-center gap-2 fixed  inset-y-20 z-50 bg-white h-28 dark:bg-gray-900 flex-col md:flex-row"
       >
         <input
           placeholder="Search Products"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          className="md:w-1/2  w-full h-full placeholder:text-gray-700 placeholder:pl-4 dark:placeholder:text-white dark:bg-slate-600 dark:border-none"
+          className="md:w-1/2   h-full w-[90%]   placeholder:text-gray-700 placeholder:pl-4 dark:placeholder:text-white dark:bg-slate-600 dark:border-none"
         />
-        <button className=" h-full p-2 rounded bg-green-500 text-gray-800 font-medium ">
+        <button className=" h-full px-4 rounded bg-green-500 text-gray-800 md:w-28 font-medium w-1/4 ">
           Add Todo
         </button>
       </form>
 
-      <div className="w-full   dark:bg-gray-900  pt-16  rounded-md   h-[400px] px-4 flex flex-col items-center items-center">
+      <div className="w-full mt-10 md:mt-0   dark:bg-gray-900  pt-16  rounded-md   h-[400px] px-4 flex flex-col items-center items-center">
         <Table>
           {todos.map((todo) => (
             <TodoItem
