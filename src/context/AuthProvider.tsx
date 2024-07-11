@@ -17,13 +17,19 @@ type AuthProviderProps = PropsWithChildren & {
 };
 
 export default function AuthProvider({ children }: AuthProviderProps) {
-  const [user, setUser] = useState<User | null>(null);
+  const storedUser = localStorage.getItem("user");
+
+  const [user, setUser] = useState<User | null>(
+    storedUser ? JSON.parse(storedUser) : null
+  );
 
   const signIn = (newUser: User) => {
     setUser(newUser);
   };
   const signOut = () => {
     setUser(null);
+    localStorage.removeItem("user");
+    console.log("hisadsadsa");
   };
   console.log(user);
 

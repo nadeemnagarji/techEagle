@@ -11,6 +11,10 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (localStorage.getItem("user")) {
+      console.log("hi");
+      return;
+    }
     if (user === null) {
       navigate("/signup", { replace: true });
     }

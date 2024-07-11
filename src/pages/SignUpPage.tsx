@@ -21,6 +21,12 @@ export default function SignUpPage() {
   const { signIn } = useAuth();
   const onSubmitHandler = (data: SignUpProps) => {
     navigate("/");
+    const user = JSON.stringify(data);
+    console.log(user);
+
+    localStorage.setItem("user", user);
+    console.log("dataset");
+
     signIn(data);
   };
 
