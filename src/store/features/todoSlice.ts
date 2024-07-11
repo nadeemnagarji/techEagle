@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { MutableRefObject } from "react";
 
-type Todo = {
+export type Todo = {
   id: number;
   name: string;
   duration: number;

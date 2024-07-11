@@ -4,7 +4,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useTheme } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthProvider";
 
 type SignUpProps = z.infer<typeof signUpSchema>;
